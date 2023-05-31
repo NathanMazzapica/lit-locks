@@ -3,9 +3,11 @@ PLUGIN.name = "Lit Locks"
 PLUGIN.description = "Adds a dyanmic light to combine locks"
 PLUGIN.author = "Generic"
 
+ix.util.Include("sv_plugin.lua")
 
+ix.util.Include("cl_plugin.lua")
+AddCSLuaFile("cl_plugin.lua")
 
--- create a config option for the light radius
 ix.config.Add("LockRadius", 128, "The radius of the light emitted by combine locks", nil, {
     data = {min = 0, max = 384},
     category = "Lit Locks"
