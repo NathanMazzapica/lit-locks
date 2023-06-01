@@ -41,7 +41,7 @@ function PLUGIN:SaveCombineLocks()
 		end
 	end
 
-	PrintTable(data)
+	
 
 	ix.data.Set("combineLocksLit", data)
 end
@@ -58,7 +58,7 @@ function PLUGIN:LoadCombineLocks()
 			lock:Spawn()
 			lock:SetDoor(door, door:LocalToWorld(v[2]), door:LocalToWorldAngles(v[3]))
 			lock:SetLocked(v[4])
-            print(v[5])
+            
 		end
 	end
 end
