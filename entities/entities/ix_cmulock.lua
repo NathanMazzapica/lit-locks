@@ -10,9 +10,9 @@ ENT.Spawnable = true
 ENT.AdminOnly = true
 ENT.PhysgunDisable = true
 ENT.bNoPersist = true
-ENT.key = "cwucard"
-ENT.spawnClassName = "ix_cwulock"
-ENT.lockedColor = Color(255, 255, 0, 255) -- The key that is required to open the door. This is the item's Unique ID.
+ENT.key = "cmucard"
+ENT.spawnClassName = "ix_cmulock"
+ENT.lockedColor = Color(255, 32, 240, 255) -- The key that is required to open the door. This is the item's Unique ID.
 -- See read me for creating new locks and keys
 
 function ENT:SetupDataTables()

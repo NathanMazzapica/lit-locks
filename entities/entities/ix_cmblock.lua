@@ -10,10 +10,9 @@ ENT.Spawnable = true
 ENT.AdminOnly = true
 ENT.PhysgunDisable = true
 ENT.bNoPersist = true
-ENT.key = "cwucard"
-ENT.spawnClassName = "ix_cwulock"
-ENT.lockedColor = Color(255, 255, 0, 255) -- The key that is required to open the door. This is the item's Unique ID.
+ENT.lockedColor = Color(0, 50, 255, 255) -- The key that is required to open the door. This is the item's Unique ID.
 -- See read me for creating new locks and keys
+ENT.spawnClassName = "ix_cmblock"
 
 function ENT:SetupDataTables()
 	self:NetworkVar("Bool", 0, "Locked")
@@ -156,7 +155,7 @@ if (SERVER) then
 			return
 		end
 
-		if (!client:GetCharacter():GetInventory():HasItem(self.key) and !client:IsCombine()) then
+		if (!client:IsCombine()) then
 			self:DisplayError()
 			self.nextUseTime = CurTime() + 2
 

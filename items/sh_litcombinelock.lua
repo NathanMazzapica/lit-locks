@@ -1,4 +1,4 @@
-ITEM.name = "Civil Worker's Union Lock"
+ITEM.name = "Combine Restrictor"
 ITEM.category = "Lit Locks"
 ITEM.description = "A metal apparatus applied to doors."
 ITEM.model = Model("models/props_combine/combine_lock01.mdl")
@@ -9,7 +9,6 @@ ITEM.iconCam = {
 	ang = Angle(0, 270, 0),
 	fov = 25.29
 }
-ITEM.lockEntity = "ix_cwulock"
 
 ITEM.functions.Place = {
 	OnRun = function(itemTable)
@@ -19,7 +18,7 @@ ITEM.functions.Place = {
 			data.endpos = data.start + client:GetAimVector() * 96
 			data.filter = client
 
-		local lock = scripted_ents.Get(itemTable.lockEntity):SpawnFunction(client, util.TraceLine(data))
+		local lock = scripted_ents.Get("ix_cmblock"):SpawnFunction(client, util.TraceLine(data))
 
 		if (IsValid(lock)) then
 			client:EmitSound("physics/metal/weapon_impact_soft2.wav", 75, 80)

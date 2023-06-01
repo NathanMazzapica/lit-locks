@@ -1,4 +1,4 @@
-ITEM.name = "Civil Worker's Union Lock"
+ITEM.name = "Civil Medical Union Lock"
 ITEM.category = "Lit Locks"
 ITEM.description = "A metal apparatus applied to doors."
 ITEM.model = Model("models/props_combine/combine_lock01.mdl")
@@ -9,7 +9,7 @@ ITEM.iconCam = {
 	ang = Angle(0, 270, 0),
 	fov = 25.29
 }
-ITEM.lockEntity = "ix_cwulock"
+ITEM.lockEntity = "ix_cmulock"
 
 ITEM.functions.Place = {
 	OnRun = function(itemTable)
